@@ -1,58 +1,55 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+  <v-container>
+    <v-toolbar>
+     
+
+      <v-toolbar-title>Soluciones MisionTIC</v-toolbar-title>
+      <v-spacer></v-spacer>
+      
+      <v-btn
+      icon
+      class="mr-5"
+      to="/login"
+      >
+        <v-icon>mdi-logout</v-icon>
+        <span>Login</span>
+      </v-btn>
+    </v-toolbar>
+    
+    <carausel></carausel>
+    <br>
+    <h1  class="font-weight-bold">QUIENES SOMOS?</h1 >
+    <p class="font-weight-bold text-justify">
+      Somos una institución de Desarrollo, regulada y confiable que brinda soluciones de crecimiento empresarial.
+      Conocemos los retos a los que se enfrentan las pequeñas, medianas y grandes empresas, por lo cual otorgamos soluciones de optimización empresariales de forma rápida y con atención 100% personalizada.
+      Nos diferenciamos por la velocidad en la que ponemos a su disposición los recursos y herramientas que necesita para impulsar su negocio.
+
     </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+    <section-api></section-api>
+    <nuestro-footer></nuestro-footer>
+    
+  </v-container>
+  
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+import Carausel from './Carausel.vue'
+import SectionApi from './SectionApi.vue'
+import NuestroFooter from './NuestroFooter.vue'
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+  export default {
+  components: { Carausel , SectionApi, NuestroFooter},
+    name: 'HelloWorld',  
+   
+
+   
+    
+  }
+</script>
+<style >
+h1 {
+    text-align:center;
+    color:cornflowerblue
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
